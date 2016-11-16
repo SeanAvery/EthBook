@@ -4,11 +4,13 @@ import {Grid, Row, Col} from 'react-bootstrap'
 
 import ContactBox from './components/ContactBox'
 import WalletBox from './components/WalletBox'
+import NavBar from './components/NavBar'
 
 class App extends React.Component {
   render() {
     return (
       <div>
+        <NavBar />
         <Grid>
           <Col xs={12} md={6}>
             <ContactBox />
