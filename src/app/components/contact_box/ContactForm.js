@@ -3,6 +3,26 @@ import {render} from 'react-dom'
 import {FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap'
 
 class ContactForm extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: '',
+      key: ''
+    }
+    this.handleNameChange = this.handleNameChange.bind(this)
+    this.handleKeyChange = this.handleKeyChange.bind(this)
+  }
+
+  handleNameChange(e) {
+    console.log(e.target.value)
+    this.setState({name: e.target.value})
+  }
+
+  handleKeyChange(e) {
+    console.log(e.target.value)
+    this.setState({key: e.target.value})
+  }
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>

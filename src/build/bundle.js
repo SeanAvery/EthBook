@@ -41770,13 +41770,33 @@
 	var ContactForm = function (_React$Component) {
 	  _inherits(ContactForm, _React$Component);
 	
-	  function ContactForm() {
+	  function ContactForm(props) {
 	    _classCallCheck(this, ContactForm);
 	
-	    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+	
+	    _this.state = {
+	      name: '',
+	      key: ''
+	    };
+	    _this.handleNameChange = _this.handleNameChange.bind(_this);
+	    _this.handleKeyChange = _this.handleKeyChange.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(ContactForm, [{
+	    key: 'handleNameChange',
+	    value: function handleNameChange(e) {
+	      console.log(e.target.value);
+	      this.setState({ name: e.target.value });
+	    }
+	  }, {
+	    key: 'handleKeyChange',
+	    value: function handleKeyChange(e) {
+	      console.log(e.target.value);
+	      this.setState({ key: e.target.value });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
