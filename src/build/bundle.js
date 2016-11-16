@@ -22195,11 +22195,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Wallet Box'
-	        ),
 	        _react2.default.createElement(_SendForm2.default, null),
 	        _react2.default.createElement(_SendHistory2.default, null)
 	      );
@@ -41993,13 +41988,38 @@
 	var SendForm = function (_React$Component) {
 	  _inherits(SendForm, _React$Component);
 	
-	  function SendForm() {
+	  function SendForm(props) {
 	    _classCallCheck(this, SendForm);
 	
-	    return _possibleConstructorReturn(this, (SendForm.__proto__ || Object.getPrototypeOf(SendForm)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (SendForm.__proto__ || Object.getPrototypeOf(SendForm)).call(this, props));
+	
+	    _this.state = {
+	      name: '',
+	      amount: 0
+	    };
+	
+	    _this.handleNameChange = _this.handleNameChange.bind(_this);
+	    _this.handleAmountChange = _this.handleAmountChange.bind(_this);
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(SendForm, [{
+	    key: 'handleNameChange',
+	    value: function handleNameChange(e) {
+	      console.log(e.target.value);
+	      this.setState({ name: e.target.value });
+	    }
+	  }, {
+	    key: 'handleAmountChange',
+	    value: function handleAmountChange(e) {
+	      console.log(e.target.value);
+	      this.setState({ amount: e.target.value });
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(e) {}
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(

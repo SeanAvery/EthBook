@@ -21,11 +21,10 @@ class WalletBox extends React.Component {
       }
     })
   }
-  
+
   render() {
     return (
       <div>
-        <p>Wallet Box</p>
         <SendForm />
         <SendHistory />
       </div>
