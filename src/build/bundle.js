@@ -22200,6 +22200,13 @@
 	  }, {
 	    key: 'onUpdate',
 	    value: function onUpdate(name, amount) {
+	      try {
+	        var reciever_account = localStorage.getItem(name);
+	        console.log('reciever_account is: ' + reciever_account);
+	      } catch (err) {
+	        console.log('Name ' + name + ' does not exist in local storage. Error: ' + err);
+	      }
+	
 	      var transaction = 'You sent ' + name + ' ' + amount + ' eth ';
 	      var newArray = (0, _reactAddonsUpdate2.default)(this.state.transactions, { $push: [transaction] });
 	      this.setState({ transactions: newArray });
