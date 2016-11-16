@@ -22207,6 +22207,9 @@
 	        console.log('Name ' + name + ' does not exist in local storage. Error: ' + err);
 	      }
 	
+	      var wei_amount = Web3.toWei(amount, "ether");
+	      console.log('wei amount is: ' + wei_amount);
+	
 	      var transaction = 'You sent ' + name + ' ' + amount + ' eth ';
 	      var newArray = (0, _reactAddonsUpdate2.default)(this.state.transactions, { $push: [transaction] });
 	      this.setState({ transactions: newArray });
