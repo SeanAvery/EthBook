@@ -31,7 +31,8 @@ class ContactForm extends React.Component {
     catch(err) {
       console.log('Did not save to lacal storage Error: ' + err.message)
     }
-    
+    console.log('submited contact to local storage ' + this.state.name + ': ' + this.state.key)
+
     if(typeof this.props.onUpdate === 'function') {
       this.props.onUpdate(this.state.name)
     } else {
