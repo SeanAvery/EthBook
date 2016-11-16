@@ -50,14 +50,13 @@ class WalletBox extends React.Component {
       value: wei_amount
     }, (err, res) => {
       if(!err) {
-        console.log('succesfully sent ether!!')
-        console.log(res)
+        console.log('succesfully sent ether! tansaction address is: ' + res)
       } else {
         console.log('there is an error')
         console.log(err)
       }
     })
-    
+
     var transaction = 'You sent ' + name + ' ' + amount + ' eth '
     var newArray = update(this.state.transactions, {$push: [transaction]})
     this.setState({transactions: newArray})

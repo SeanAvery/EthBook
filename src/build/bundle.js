@@ -22216,8 +22216,7 @@
 	        value: wei_amount
 	      }, function (err, res) {
 	        if (!err) {
-	          console.log('succesfully sent ether!!');
-	          console.log(res);
+	          console.log('succesfully sent ether! tansaction address is: ' + res);
 	        } else {
 	          console.log('there is an error');
 	          console.log(err);
