@@ -22210,8 +22210,8 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_SendForm2.default, null),
-	        _react2.default.createElement(_SendHistory2.default, null)
+	        _react2.default.createElement(_SendForm2.default, { onUpdate: this.onUpdate }),
+	        _react2.default.createElement(_SendHistory2.default, { transactions: this.state.transactions })
 	      );
 	    }
 	  }]);
@@ -42033,7 +42033,10 @@
 	    }
 	  }, {
 	    key: 'handleSubmit',
-	    value: function handleSubmit(e) {}
+	    value: function handleSubmit(e) {
+	      this.props.onUpdate(this.state.name, this.state.amount);
+	      e.preventDefault();
+	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
@@ -42091,6 +42094,8 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
+	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 180);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42102,10 +42107,10 @@
 	var SendHistory = function (_React$Component) {
 	  _inherits(SendHistory, _React$Component);
 	
-	  function SendHistory() {
+	  function SendHistory(props) {
 	    _classCallCheck(this, SendHistory);
 	
-	    return _possibleConstructorReturn(this, (SendHistory.__proto__ || Object.getPrototypeOf(SendHistory)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (SendHistory.__proto__ || Object.getPrototypeOf(SendHistory)).call(this, props));
 	  }
 	
 	  _createClass(SendHistory, [{
@@ -42115,9 +42120,15 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
+	          _reactBootstrap.ListGroup,
 	          null,
-	          'SendHistory here'
+	          this.props.transactions.map(function (contact, i) {
+	            return _react2.default.createElement(
+	              _reactBootstrap.ListGroupItem,
+	              { key: i },
+	              contact
+	            );
+	          })
 	        )
 	      );
 	    }

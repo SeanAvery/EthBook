@@ -41,8 +41,8 @@ class WalletBox extends React.Component {
   render() {
     return (
       <div>
-        <SendForm />
-        <SendHistory />
+        <SendForm onUpdate={this.onUpdate}/>
+        <SendHistory transactions={this.state.transactions}/>
       </div>
     )
   }

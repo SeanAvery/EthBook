@@ -26,7 +26,8 @@ class SendForm extends React.Component {
   }
 
   handleSubmit(e) {
-  
+    this.props.onUpdate(this.state.name, this.state.amount)
+    e.preventDefault()
   }
 
   render() {
