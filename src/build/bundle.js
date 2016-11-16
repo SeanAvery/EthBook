@@ -22168,7 +22168,15 @@
 	  function WalletBox() {
 	    _classCallCheck(this, WalletBox);
 	
-	    return _possibleConstructorReturn(this, (WalletBox.__proto__ || Object.getPrototypeOf(WalletBox)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (WalletBox.__proto__ || Object.getPrototypeOf(WalletBox)).call(this));
+	
+	    _this.state = {
+	      transactions: [],
+	      coinbase: ''
+	    };
+	
+	    _this.onUpdate = _this.onUpdate.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(WalletBox, [{
@@ -22188,6 +22196,13 @@
 	          console.log('unable to get coinbase adress: ' + err);
 	        }
 	      });
+	    }
+	  }, {
+	    key: 'onUpdate',
+	    value: function onUpdate(name, amount) {
+	      var transaction = 'You sent ' + name + ' ' + amount + ' eth ';
+	      var newArray = (0, _reactAddonsUpdate2.default)(this.state.transactions, { $push: [transaction] });
+	      this.setState({ transactions: newArray });
 	    }
 	  }, {
 	    key: 'render',
