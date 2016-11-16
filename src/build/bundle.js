@@ -41980,6 +41980,8 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
+	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 180);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42001,9 +42003,33 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'p',
-	        null,
-	        'SendForm here '
+	        'form',
+	        { onSubmit: this.handleSubmit },
+	        _react2.default.createElement(
+	          _reactBootstrap.FormGroup,
+	          null,
+	          _react2.default.createElement(
+	            _reactBootstrap.ControlLabel,
+	            null,
+	            'Send To'
+	          ),
+	          _react2.default.createElement(_reactBootstrap.FormControl, { onChange: this.handleNameChange })
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.FormGroup,
+	          null,
+	          _react2.default.createElement(
+	            _reactBootstrap.ControlLabel,
+	            null,
+	            'Amount'
+	          ),
+	          _react2.default.createElement(_reactBootstrap.FormControl, { onChange: this.handleAmountChange })
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Button,
+	          { type: 'submit' },
+	          'Send ETH'
+	        )
 	      );
 	    }
 	  }]);
