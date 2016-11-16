@@ -11,6 +11,7 @@ class ContactForm extends React.Component {
     }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleKeyChange = this.handleKeyChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleNameChange(e) {
@@ -22,6 +23,15 @@ class ContactForm extends React.Component {
     console.log(e.target.value)
     this.setState({key: e.target.value})
   }
+
+  handleSubmit(e) {
+    if(typeof this.props.onUpdate === 'function') {
+      this.props.onUpdate(this.state.name)
+    } else {
+      console.log('parent function onChange is not available')
+    }
+  }
+
 
   render() {
     return (
