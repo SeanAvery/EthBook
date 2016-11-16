@@ -9,7 +9,6 @@ class SendForm extends React.Component {
       name: '',
       amount: 0
     }
-
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleAmountChange = this.handleAmountChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)

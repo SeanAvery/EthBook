@@ -42035,7 +42035,6 @@
 	      name: '',
 	      amount: 0
 	    };
-	
 	    _this.handleNameChange = _this.handleNameChange.bind(_this);
 	    _this.handleAmountChange = _this.handleAmountChange.bind(_this);
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
