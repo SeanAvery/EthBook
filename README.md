@@ -1,6 +1,6 @@
 #EthBook
 Private In-Browser contact list for Ethereum payment network. <br />
-Easily save send Eth to your contacts. <br />
+Easily save and send Eth to your contacts. <br />
 Runs entirely in the browser! All contacts saved in local storage. <br />
 
 ## Run On Your Machine
