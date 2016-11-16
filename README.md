@@ -1,7 +1,7 @@
 #EthBook
-Private In-Browser contact list for Ethereum payment network. /n
-Easily save contacts and send ether to your contacts. /n
-Runs entirely in the browser! All contacts saved in local storage. /n
+Private In-Browser contact list for Ethereum payment network. \n
+Easily save contacts and send ether to your contacts. \n
+Runs entirely in the browser! All contacts saved in local storage. \n
 
 ## Run On Your Machine
 1. git clone https://github.com/SeanAvery/EthBook.git
