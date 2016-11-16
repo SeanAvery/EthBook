@@ -22210,6 +22210,20 @@
 	      var wei_amount = Web3.toWei(amount, "ether");
 	      console.log('wei amount is: ' + wei_amount);
 	
+	      var send_ether = Web3.eth.sendTransaction({
+	        from: this.state.coinbase,
+	        to: reciever_account,
+	        value: wei_amount
+	      }, function (err, res) {
+	        if (!err) {
+	          console.log('succesfully sent ether!!');
+	          console.log(res);
+	        } else {
+	          console.log('there is an error');
+	          console.log(err);
+	        }
+	      });
+	
 	      var transaction = 'You sent ' + name + ' ' + amount + ' eth ';
 	      var newArray = (0, _reactAddonsUpdate2.default)(this.state.transactions, { $push: [transaction] });
 	      this.setState({ transactions: newArray });
