@@ -41826,6 +41826,12 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      try {
+	        localStorage.setItem(this.state.name, this.state.key);
+	      } catch (err) {
+	        console.log('Did not save to lacal storage Error: ' + err.message);
+	      }
+	
 	      if (typeof this.props.onUpdate === 'function') {
 	        this.props.onUpdate(this.state.name);
 	      } else {
