@@ -22089,6 +22089,16 @@
 	  }
 	
 	  _createClass(ContactBox, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      console.log('ContactBox has mounted');
+	      if (typeof Storage !== "undefined") {
+	        console.log('Your browser ' + navigator.appName + ' supports local storage');
+	      } else {
+	        console.log('Your browser ' + navigator.appName + ' DOES NOT support local storage');
+	      }
+	    }
+	  }, {
 	    key: 'onUpdate',
 	    value: function onUpdate(name) {
 	      var newArray = (0, _reactAddonsUpdate2.default)(this.state.contacts, { $push: [name] });

@@ -13,6 +13,16 @@ class ContactBox extends React.Component {
     }
     this.onUpdate = this.onUpdate.bind(this)
   }
+  
+  componentDidMount() {
+    console.log('ContactBox has mounted')
+    if(typeof(Storage) !== "undefined") {
+      console.log('Your browser ' + navigator.appName + ' supports local storage')
+    }
+    else {
+      console.log('Your browser ' + navigator.appName + ' DOES NOT support local storage')
+    }
+  }
 
   onUpdate(name) {
     var newArray = update(this.state.contacts, {$push: [name]})
