@@ -57,6 +57,14 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
+	var _ContactBox = __webpack_require__(/*! ./components/ContactBox */ 178);
+	
+	var _ContactBox2 = _interopRequireDefault(_ContactBox);
+	
+	var _WalletBox = __webpack_require__(/*! ./components/WalletBox */ 179);
+	
+	var _WalletBox2 = _interopRequireDefault(_WalletBox);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -84,7 +92,9 @@
 	          'p',
 	          null,
 	          ' hello world form index.js'
-	        )
+	        ),
+	        _react2.default.createElement(_ContactBox2.default, null),
+	        _react2.default.createElement(_WalletBox2.default, null)
 	      );
 	    }
 	  }]);
@@ -22011,6 +22021,114 @@
 	
 	module.exports = ReactDOMInvalidARIAHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+
+/***/ },
+/* 178 */
+/*!******************************************!*\
+  !*** ./src/app/components/ContactBox.js ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 32);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ContactBox = function (_React$Component) {
+	  _inherits(ContactBox, _React$Component);
+	
+	  function ContactBox() {
+	    _classCallCheck(this, ContactBox);
+	
+	    return _possibleConstructorReturn(this, (ContactBox.__proto__ || Object.getPrototypeOf(ContactBox)).apply(this, arguments));
+	  }
+	
+	  _createClass(ContactBox, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Contact Box '
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactBox;
+	}(_react2.default.Component);
+	
+	module.exports = ContactBox;
+
+/***/ },
+/* 179 */
+/*!*****************************************!*\
+  !*** ./src/app/components/WalletBox.js ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 32);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var WalletBox = function (_React$Component) {
+	  _inherits(WalletBox, _React$Component);
+	
+	  function WalletBox() {
+	    _classCallCheck(this, WalletBox);
+	
+	    return _possibleConstructorReturn(this, (WalletBox.__proto__ || Object.getPrototypeOf(WalletBox)).apply(this, arguments));
+	  }
+	
+	  _createClass(WalletBox, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Wallet Box'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return WalletBox;
+	}(_react2.default.Component);
+	
+	module.exports = WalletBox;
 
 /***/ }
 /******/ ]);
