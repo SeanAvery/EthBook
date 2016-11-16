@@ -1,0 +1,21 @@
+{
+  "name": "eth_book",
+  "version": "1.0.0",
+  "description": "Private in-browser contact list for Ethereum payment network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ethereum",
+    "react",
+    "javascript",
+    "es6",
+    "immutable",
+    "local",
+    "storage",
+    "webpack"
+  ],
+  "author": "Sean Avery Pollock",
+  "license": "ISC"
+}
