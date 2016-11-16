@@ -9,6 +9,22 @@ var config = {
   output: {
     path: build_dir,
     filename : 'bundle.js'
+  },
+  module : {
+    loaders : [
+      {
+        test : /\.js?/,
+        include : app_dir,
+        loader : 'babel',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
+      {
+        test: /\.json?$/,
+        loader: 'json-loader'
+      }
+    ]
   }
 }
 
