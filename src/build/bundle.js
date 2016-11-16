@@ -22117,6 +22117,14 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
+	var _SendForm = __webpack_require__(/*! ./wallet_box/SendForm */ 435);
+	
+	var _SendForm2 = _interopRequireDefault(_SendForm);
+	
+	var _SendHistory = __webpack_require__(/*! ./wallet_box/SendHistory */ 436);
+	
+	var _SendHistory2 = _interopRequireDefault(_SendHistory);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22144,7 +22152,9 @@
 	          'p',
 	          null,
 	          'Wallet Box'
-	        )
+	        ),
+	        _react2.default.createElement(_SendForm2.default, null),
+	        _react2.default.createElement(_SendHistory2.default, null)
 	      );
 	    }
 	  }]);
@@ -41833,6 +41843,110 @@
 	}(_react2.default.Component);
 	
 	module.exports = ContactList;
+
+/***/ },
+/* 435 */
+/*!***************************************************!*\
+  !*** ./src/app/components/wallet_box/SendForm.js ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 32);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SendForm = function (_React$Component) {
+	  _inherits(SendForm, _React$Component);
+	
+	  function SendForm() {
+	    _classCallCheck(this, SendForm);
+	
+	    return _possibleConstructorReturn(this, (SendForm.__proto__ || Object.getPrototypeOf(SendForm)).apply(this, arguments));
+	  }
+	
+	  _createClass(SendForm, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        'SendForm here '
+	      );
+	    }
+	  }]);
+	
+	  return SendForm;
+	}(_react2.default.Component);
+	
+	module.exports = SendForm;
+
+/***/ },
+/* 436 */
+/*!******************************************************!*\
+  !*** ./src/app/components/wallet_box/SendHistory.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 32);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SendHistory = function (_React$Component) {
+	  _inherits(SendHistory, _React$Component);
+	
+	  function SendHistory() {
+	    _classCallCheck(this, SendHistory);
+	
+	    return _possibleConstructorReturn(this, (SendHistory.__proto__ || Object.getPrototypeOf(SendHistory)).apply(this, arguments));
+	  }
+	
+	  _createClass(SendHistory, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'SendHistory here'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return SendHistory;
+	}(_react2.default.Component);
+	
+	module.exports = SendHistory;
 
 /***/ }
 /******/ ]);
