@@ -30,6 +30,7 @@ class ContactForm extends React.Component {
     } else {
       console.log('parent function onChange is not available')
     }
+    e.preventDefault()
   }
 
 

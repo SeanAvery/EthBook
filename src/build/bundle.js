@@ -22106,7 +22106,7 @@
 	          'Contact Box '
 	        ),
 	        _react2.default.createElement(_ContactForm2.default, { onUpdate: this.onUpdate }),
-	        _react2.default.createElement(_ContactList2.default, null)
+	        _react2.default.createElement(_ContactList2.default, { contacts: this.state.contacts })
 	      );
 	    }
 	  }]);
@@ -41821,6 +41821,7 @@
 	      } else {
 	        console.log('parent function onChange is not available');
 	      }
+	      e.preventDefault();
 	    }
 	  }, {
 	    key: 'render',
@@ -41879,6 +41880,8 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
+	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 180);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41890,10 +41893,10 @@
 	var ContactList = function (_React$Component) {
 	  _inherits(ContactList, _React$Component);
 	
-	  function ContactList() {
+	  function ContactList(props) {
 	    _classCallCheck(this, ContactList);
 	
-	    return _possibleConstructorReturn(this, (ContactList.__proto__ || Object.getPrototypeOf(ContactList)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (ContactList.__proto__ || Object.getPrototypeOf(ContactList)).call(this, props));
 	  }
 	
 	  _createClass(ContactList, [{
@@ -41903,9 +41906,15 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
+	          _reactBootstrap.ListGroup,
 	          null,
-	          'Contact List here'
+	          this.props.contacts.map(function (contact, i) {
+	            return _react2.default.createElement(
+	              _reactBootstrap.ListGroupItem,
+	              { key: i },
+	              contact
+	            );
+	          })
 	        )
 	      );
 	    }

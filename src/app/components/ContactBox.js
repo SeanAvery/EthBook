@@ -24,7 +24,7 @@ class ContactBox extends React.Component {
       <div>
         <p>Contact Box </p>
         <ContactForm onUpdate={this.onUpdate}/>
-        <ContactList />
+        <ContactList contacts={this.state.contacts}/>
       </div>
     )
   }
